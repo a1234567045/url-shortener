@@ -1,20 +1,22 @@
 <div class="d-flex flex-column justify-content-center 
 align-items-center">
-  <span class="h2">URL Shortener</span>
+  <span class="input-group-text">URL Shortener</span>
   <i class="fas fa-link fa-9x"></i>
 </div>
 <div class="d-flex justify-content-center 
 align-items-center">
-  <form action="/right" method="POST">
+  <form action="/shortlink" method="POST">
 
-    <input type="text" name="name" class="form-control" placeholder="input your URL here..." style="width:700px"
-      required>
+    <input type="text" name="name" class="form-control" placeholder="請輸入網址，如：https://www.google.com.tw/"
+      style="width:700px" required>
 
 
     {{!-- 防止使用者未輸入資料 --}}
     <div class="d-flex justify-content-center 
 align-items-center m-2">
-      <button type="submit" class="btn btn-secondary">Shorten</button>
+      <button type="submit" class="btn btn-success">Shorten</button>
     </div>
   </form>
 </div>
+
+{{!-- btn btn-outline-light --}}

@@ -4,7 +4,7 @@ const UrlShort = require('../../models/shortenweb')
 const getShortLink = require('./getshorturl')
 
 
-router.get('/shows', (req, res) => {
+router.get('/', (req, res) => {
   res.render('show')
 
 })
@@ -43,16 +43,6 @@ router.post('/', (req, res) => {
     })
 })
 
-// //redirect 
-// router.get('/:show', (req, res) => {
-
-//   const shortenName = req.params.show
-//   console.log(shortenName)
-//   UrlShort.findOne({ shortlink: shortenName })
-//     .lean()
-//     .then()
-//     .catch(error => console.log('error'))
-// })
 module.exports = router
 
 

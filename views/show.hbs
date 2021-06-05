@@ -2,19 +2,24 @@
 align-items-center">
   <span class="h2">URL Shortener</span>
   <i class="fas fa-link fa-9x m-3"></i>
-  <div class="mt-2">
-    <p class="h4">
-      <font size="6">Success!</font>
-      Please use this link:
-    </p>
+  <div>
+    <div class="mt-2">
+      <p class="h4">
+        <font size="6">Success!</font>
+        Please use this link:
+      </p>
+    </div>
   </div>
+  <a id="copyTarget" class="h3" href="{{name}}">{{newshortenURL}}</a>
+  <form action="/shortlink" method="POST">
+    <button type="button" class="btn btn-primary btn-lg" style="width: 100px;"
+      onclick="copyEvent('copyTarget')">Copy</button>
+  </form>
+  <a class="btn btn-outline-primary m-2" href="/">BACK</a>
 </div>
-<a id="copyTarget" class="h3" href="{{name}}">{{newshortenURL}}</a>
-<form action="/right" method="POST">
-  <button type="button" class="btn btn-primary btn-lg" style="width: 100px;"
-    onclick="copyEvent('copyTarget')">Copy</button>
-</form>
-<a class="btn btn-outline-primary m-2" href="/">BACK</a>
+
+
+
 
 {{!-- ------copy function------ --}}
 <script>
