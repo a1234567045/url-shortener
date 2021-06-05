@@ -16,7 +16,7 @@ app.set('view engine', 'hbs')
 app.use(express.urlencoded({ extended: true }))
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(routes)
-app.use(methodOverride('_method'))
+app.use(methodOverride('_method'))  
 
 
 app.listen(PORT, () => {

@@ -4,30 +4,27 @@ const UrlShort = require('../../models/shortenweb')
 
 
 router.get('/', (req, res) => {
-
   return UrlShort.find()
     .lean()
-    .then(shorten => {
-      res.render('index', { shorten })
-    })
+    .then(shorten => res.render('index', { shorten }))
     .catch(error => console.log('error'))
 
 })
 
 //redirect 
-router.get('/:shorten', (req, res) => {
+// router.get('/:shorten', (req, res) => {
 
-  const shortenName = req.params.shorten
-  console.log(shortenName)
-  UrlShort.findOne({ shortlink: shortenName })
-    .lean()
-    .then((web) => {
-      if (web) {
-        res.status(302).redirect(web.name)
-      }
-    })
-    .catch(error => console.log('error'))
-})
+//   const shortenName = req.params.shorten
+//   console.log(shortenName)
+//   UrlShort.findOne({ shortlink: shortenName })
+//     .lean()
+//     .then((web) => {
+//       if (web) {
+//         res.status(302).redirect(web.name)
+//       }
+//     })
+//     .catch(error => console.log('error'))
+// })
 module.exports = router
 
 
