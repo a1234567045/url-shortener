@@ -1,1 +1,18 @@
-<h2>Hello</h2>
+<div class="d-flex flex-column justify-content-center 
+align-items-center">
+  <span class="h2">URL Shortener</span>
+  <i class="fas fa-link fa-9x"></i>
+</div>
+<div class="d-flex justify-content-center 
+align-items-center">
+  <form action="/shorten/show">
+
+    <input type="text" name="name" class="form-control" placeholder="input your URL here..." style="width:700px"
+      required>
+    {{!-- 防止使用者未輸入資料 --}}
+    <div class="d-flex justify-content-center 
+align-items-center m-2">
+      <button type="submit" class="btn btn-secondary">Shorten</button>
+    </div>
+  </form>
+</div>
